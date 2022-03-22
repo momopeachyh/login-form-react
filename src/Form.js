@@ -46,7 +46,7 @@ function Form() {
           required
         ></input>
         <button className="btn btn-primary" onClick={getInputs}>
-          Submit
+          Sign in
         </button>
       </form>
     </div>
