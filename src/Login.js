@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 function Form() {
+  let navigate = useNavigate();
   const usernameDefault = "jsparrow9";
   const passwordDefault = "blackpearlrockz!";
   const emailDefault = "captainjack@gmail.com";
@@ -15,9 +17,9 @@ function Form() {
       passwordInput === passwordDefault &&
       emailInput === emailDefault
     ) {
-      console.log("success");
+      navigate("/success");
     } else {
-      console.log("try again");
+      navigate("/failure");
     }
   }
 
@@ -40,7 +42,7 @@ function Form() {
         ></input>
         <label>Email</label>
         <input
-          type="text"
+          type="email"
           className="form-control mb-3"
           id="email"
           required
