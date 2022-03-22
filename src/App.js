@@ -1,10 +1,14 @@
 import "./App.css";
-import Form from "./Form.js";
+import Login from "./Login.js";
+import Success from "./Success.js";
+import Failure from "./Failure.js";
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Login />
+      <Success />
+      <Failure />{" "}
     </div>
   );
 }
