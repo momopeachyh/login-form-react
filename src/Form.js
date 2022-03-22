@@ -1,18 +1,9 @@
 import React from "react";
 
 function Form() {
-  // const credentials = {
-  //   username: "jsparrow9",
-  //   password: "blackpearlrockz!",
-  //   email: "captainjack@gmail.com",
-  // };
-
   const usernameDefault = "jsparrow9";
   const passwordDefault = "blackpearlrockz!";
   const emailDefault = "captainjack@gmail.com";
-
-  const defaultCredentials = [usernameDefault, passwordDefault, emailDefault];
-  let inputValues = [];
 
   function getInputs(event) {
     event.preventDefault();
@@ -24,12 +15,9 @@ function Form() {
       passwordInput === passwordDefault &&
       emailInput === emailDefault
     ) {
-      inputValues.push(usernameInput, passwordInput, emailInput);
-      console.log(inputValues);
-      console.log("element pushed");
-      if (inputValues === defaultCredentials) {
-        console.log("match");
-      }
+      console.log("success");
+    } else {
+      console.log("try again");
     }
   }
 
@@ -40,7 +28,6 @@ function Form() {
         <input
           type="text"
           className="form-control mb-3"
-          onSubmit={getInputs}
           id="username"
           required
         ></input>
@@ -48,19 +35,17 @@ function Form() {
         <input
           type="password"
           className="form-control mb-3"
-          onSubmit={getInputs}
           id="password"
           required
         ></input>
         <label>Email</label>
         <input
-          type="email"
+          type="text"
           className="form-control mb-3"
-          onInput={getInputs}
           id="email"
           required
         ></input>
-        <button className="btn btn-primary" onSubmit={getInputs}>
+        <button className="btn btn-primary" onClick={getInputs}>
           Submit
         </button>
       </form>
