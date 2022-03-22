@@ -1,11 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-function Form() {
+function Form(props) {
   let navigate = useNavigate();
-  const usernameDefault = "jsparrow9";
-  const passwordDefault = "blackpearlrockz!";
-  const emailDefault = "captainjack@gmail.com";
 
   function getInputs(event) {
     event.preventDefault();
@@ -13,9 +10,9 @@ function Form() {
     const passwordInput = document.getElementById("password").value;
     const emailInput = document.getElementById("email").value;
     if (
-      usernameInput === usernameDefault &&
-      passwordInput === passwordDefault &&
-      emailInput === emailDefault
+      usernameInput === props.username &&
+      passwordInput === props.password &&
+      emailInput === props.email
     ) {
       navigate("/success");
     } else {
