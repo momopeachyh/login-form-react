@@ -14,9 +14,9 @@ function Form(props) {
       passwordInput === props.password &&
       emailInput === props.email
     ) {
-      navigate("login-form-react/success");
+      navigate("/success");
     } else {
-      navigate("login-form-react/failure");
+      navigate("/failure");
     }
   }
 
