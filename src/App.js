@@ -14,13 +14,16 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/"
+            path="login-form-react/"
             element={
               <Login username={username} password={password} email={email} />
             }
           />
-          <Route path="/success" element={<Success username={username} />} />
-          <Route path="/failure" element={<Failure />} />
+          <Route
+            path="login-form-react/success"
+            element={<Success username={username} />}
+          />
+          <Route path="login-form-react/failure" element={<Failure />} />
         </Routes>
       </Router>
     </div>
