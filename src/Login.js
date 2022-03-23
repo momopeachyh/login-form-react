@@ -10,9 +10,9 @@ function Form(props) {
     const passwordInput = document.getElementById("password").value;
     const emailInput = document.getElementById("email").value;
     if (
-      usernameInput === props.username &&
-      passwordInput === props.password &&
-      emailInput === props.email
+      usernameInput === props.credentials.username &&
+      passwordInput === props.credentials.password &&
+      emailInput === props.credentials.email
     ) {
       navigate("/success");
     } else {
